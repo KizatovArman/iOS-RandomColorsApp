@@ -38,7 +38,7 @@ class ColorsTableVC: UIViewController {
 
 /*
  Concept of delegate: there is a function that
- sits and waits, when it happens it performs.
+ sits and waits for action, when it happens it performs.
  */
 extension ColorsTableVC: UITableViewDelegate, UITableViewDataSource {
     

@@ -15,8 +15,43 @@
                     <view key="view" contentMode="scaleToFill" id="J0h-Jk-mgB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="UCK-yR-kRu">
+                                <rect key="frame" x="48" y="373" width="318" height="31"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="redColorValueSliderChanged:" destination="cMx-tc-TEh" eventType="valueChanged" id="8FX-Un-NTT"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="6YO-cx-Y2D">
+                                <rect key="frame" x="48" y="433" width="318" height="31"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="greenColorValueChanged:" destination="cMx-tc-TEh" eventType="valueChanged" id="NhQ-OQ-ia6"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="3uN-FM-lhJ">
+                                <rect key="frame" x="48" y="493" width="318" height="31"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="blueColorValueChanged:" destination="cMx-tc-TEh" eventType="valueChanged" id="gb3-sr-nQE"/>
+                                </connections>
+                            </slider>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="7SS-3c-S49"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6YO-cx-Y2D" firstAttribute="top" secondItem="UCK-yR-kRu" secondAttribute="bottom" constant="30" id="5og-lk-1Vc"/>
+                            <constraint firstItem="6YO-cx-Y2D" firstAttribute="leading" secondItem="J0h-Jk-mgB" secondAttribute="leadingMargin" constant="30" id="Jhg-Mn-utN"/>
+                            <constraint firstItem="UCK-yR-kRu" firstAttribute="leading" secondItem="J0h-Jk-mgB" secondAttribute="leadingMargin" constant="30" id="WbG-IM-XYg"/>
+                            <constraint firstItem="3uN-FM-lhJ" firstAttribute="leading" secondItem="J0h-Jk-mgB" secondAttribute="leadingMargin" constant="30" id="cTX-lQ-PdE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6YO-cx-Y2D" secondAttribute="trailing" constant="30" id="coy-Ei-RbU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UCK-yR-kRu" secondAttribute="trailing" constant="30" id="ctm-Lv-unL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3uN-FM-lhJ" secondAttribute="trailing" constant="30" id="kb4-Va-6th"/>
+                            <constraint firstItem="6YO-cx-Y2D" firstAttribute="centerY" secondItem="J0h-Jk-mgB" secondAttribute="centerY" id="mGi-cM-aV2"/>
+                            <constraint firstItem="3uN-FM-lhJ" firstAttribute="top" secondItem="6YO-cx-Y2D" secondAttribute="bottom" constant="30" id="pGZ-h6-2WU"/>
+                            <constraint firstItem="6YO-cx-Y2D" firstAttribute="centerX" secondItem="J0h-Jk-mgB" secondAttribute="centerX" id="tFa-tg-BIZ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Yvg-d5-k7I"/>
                 </viewController>
@@ -69,10 +104,10 @@
             </objects>
             <point key="canvasLocation" x="802.29007633587787" y="-32.394366197183103"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Initial Navigation Controller-->
         <scene sceneID="Fmk-uZ-Enq">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pgU-C2-mvm" sceneMemberID="viewController">
+                <navigationController title="Initial Navigation Controller" automaticallyAdjustsScrollViewInsets="NO" id="pgU-C2-mvm" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="2uR-Mq-cKf">
                         <rect key="frame" x="0.0" y="48" width="414" height="96"/>
