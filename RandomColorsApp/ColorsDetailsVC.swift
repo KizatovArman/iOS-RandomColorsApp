@@ -14,6 +14,8 @@ class ColorsDetailsVC: UIViewController {
     @IBOutlet weak var greenColorValueSlider: UISlider!
     @IBOutlet weak var blueColorValueSlider: UISlider!
     
+    @IBOutlet weak var getRgbButton: UIButton!
+    
     enum RGB {
         case R
         case G
@@ -23,6 +25,13 @@ class ColorsDetailsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = color ?? UIColor.black
+        let rgb = getRgb(for: color ?? UIColor.black)
+        redColorValueSlider.value = Float(rgb.red)
+        greenColorValueSlider.value = Float(rgb.green)
+        blueColorValueSlider.value = Float(rgb.blue)
+        getRgbButton.tintColor = UIColor.black
+        getRgbButton.backgroundColor = UIColor.clear
+        getRgbButton.isSelected = true
     }
     
     func getRgb(for color: UIColor) -> (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
@@ -36,7 +45,7 @@ class ColorsDetailsVC: UIViewController {
         return (red: red, green: green, blue: blue, alpha: alpha)
     }
     
-    func changeCurrentColorBy(component rgbOptions: RGB, by value: CGFloat) {
+    func changeCurrentColorFor(component rgbOptions: RGB, by value: CGFloat) {
         let rgb = getRgb(for: view.backgroundColor ?? UIColor.systemBackground)
         switch rgbOptions {
         case .R:
@@ -58,14 +67,32 @@ class ColorsDetailsVC: UIViewController {
     }
     
     @IBAction func redColorValueSliderChanged(_ sender: UISlider) {
-        changeCurrentColorBy(component: .R, by: CGFloat(sender.value))
+        changeCurrentColorFor(component: .R, by: CGFloat(sender.value))
     }
 
     @IBAction func greenColorValueChanged(_ sender: UISlider) {
-        changeCurrentColorBy(component: .G, by: CGFloat(sender.value))
+        changeCurrentColorFor(component: .G, by: CGFloat(sender.value))
     }
     
     @IBAction func blueColorValueChanged(_ sender: UISlider) {
-        changeCurrentColorBy(component: .B, by: CGFloat(sender.value))
+        changeCurrentColorFor(component: .B, by: CGFloat(sender.value))
+    }
+    
+    @IBAction func getRgbButtonPressed(_ sender: UIButton) {
+        let viewColor = view.backgroundColor ?? UIColor.black
+        let rgb = getRgb(for: viewColor)
+        let alert = UIAlertController(title: "RGB Values",
+                                      message: "Red: \(Int(rgb.red * 255)), Green: \(Int(rgb.green * 255)), Blue: \(Int(rgb.blue * 255))",
+                                      preferredStyle: .alert)
+        
+                alert.addAction(
+                    UIAlertAction(
+                        title: NSLocalizedString("OK", comment: "This closes alert"),
+                        style: .default, handler:
+                            {_ in NSLog("The \"OK\" alert occured.")}
+                    )
+                )
+
+                self.present(alert, animated: true, completion: nil)
     }
 }
