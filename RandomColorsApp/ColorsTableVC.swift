@@ -9,6 +9,8 @@ import UIKit
 
 class ColorsTableVC: UIViewController {
     var colors: [UIColor] = []
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var regenerateColorsButton: UIBarButtonItem!
     
     enum Cells {
         static let colorCell = "ColorCell"
@@ -32,7 +34,12 @@ class ColorsTableVC: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destVC = segue.destination as! ColorsDetailsVC
         destVC.color = sender as? UIColor
-        
+    }
+    
+    @IBAction func rightBarButtonItemTapped(_ sender: UIBarButtonItem) {
+        colors.removeAll()
+        addRandomColors()
+        tableView.reloadData()
     }
 }
 
