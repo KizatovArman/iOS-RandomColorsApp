@@ -47,4 +47,4 @@
 
 ---
 
-[Back To The Top](#RandomColorsApp)
+[Back To The Top](#randomcolorsapp)
