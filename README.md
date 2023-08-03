@@ -1,1 +1,3 @@
 # RandomColorsApp
+
+## Screen shots
