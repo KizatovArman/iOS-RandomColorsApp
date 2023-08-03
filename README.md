@@ -1,11 +1,23 @@
 # RandomColorsApp
 
 ## Screen shots
-<img src="https://github.com/KizatovArman/iOS-RandomColorsApp/blob/main/Screen%20shots/Main%20page%201.jpg" alt="Main Page" width="400" height="800">
-<img src="https://github.com/KizatovArman/iOS-RandomColorsApp/blob/main/Screen%20shots/Main%20page%202.jpg" alt="Main Page" width="400" height="800">
-<img src="https://github.com/KizatovArman/iOS-RandomColorsApp/blob/main/Screen%20shots/Color%20page%201.jpg" alt="Main Page" width="400" height="800">
-<img src="https://github.com/KizatovArman/iOS-RandomColorsApp/blob/main/Screen%20shots/Rgb%20alert%201.jpg" alt="Main Page" width="400" height="800">
-<!-- ![Main Page](https://github.com/KizatovArman/iOS-RandomColorsApp/blob/main/Screen%20shots/Main%20page%201.jpg)
-![Main Page](https://github.com/KizatovArman/iOS-RandomColorsApp/blob/main/Screen%20shots/Main%20page%202.jpg)
-![Main Page](https://github.com/KizatovArman/iOS-RandomColorsApp/blob/main/Screen%20shots/Color%20page%201.jpg)
-![Main Page](https://github.com/KizatovArman/iOS-RandomColorsApp/blob/main/Screen%20shots/Rgb%20alert%201.jpg) -->
+<style>
+    .first_section {    
+    width: 50%;
+    min-height: 150px;
+    float: left;
+    }
+    .second_section {    
+        width: 50%;
+        min-height: 150px;
+        margin-left: 50%;
+    }
+</style>
+<div class="fist_section">
+    <img src="https://github.com/KizatovArman/iOS-RandomColorsApp/blob/main/Screen%20shots/Main%20page%201.jpg" alt="Main Page" width="400" height="800">
+    <img src="https://github.com/KizatovArman/iOS-RandomColorsApp/blob/main/Screen%20shots/Color%20page%201.jpg" alt="Color Page" width="400" height="800">
+</div>
+<div>
+    <img src="https://github.com/KizatovArman/iOS-RandomColorsApp/blob/main/Screen%20shots/Main%20page%202.jpg" alt="Main Page" width="400" height="800">
+    <img src="https://github.com/KizatovArman/iOS-RandomColorsApp/blob/main/Screen%20shots/Rgb%20alert%201.jpg" alt="Rgb alert" width="400" height="800">
+</div>
